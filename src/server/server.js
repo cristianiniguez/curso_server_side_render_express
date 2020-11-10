@@ -68,6 +68,10 @@ const renderApp = (req, res) => {
       </StaticRouter>
     </Provider>,
   );
+  res.set(
+    'Content-Security-Policy',
+    "default-src 'self'; img-src 'self' http://dummyimage.com https://gravatar.com; script-src 'self' 'sha256-n1jHrI2lN4ngk5Sy5hSo1W6k3uUvYHNkOoNvPbtTTo8='; style-src-elem 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; media-src 'self' https://mdstrm.com",
+  );
   res.send(setResponse(html, preloadedState));
 };
 
