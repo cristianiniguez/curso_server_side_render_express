@@ -57,5 +57,13 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-hot-middleware": "^2.25.0"
   },
-  "description": ""
+  "description": "Proyecto del Curso de Server Side Render con Express de Platzi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristianiniguez/curso_server_side_render_express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cristianiniguez/curso_server_side_render_express/issues"
+  },
+  "homepage": "https://github.com/cristianiniguez/curso_server_side_render_express#readme"
 }
