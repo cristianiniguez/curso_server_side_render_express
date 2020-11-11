@@ -9,14 +9,14 @@ import CarouselItem from '../components/CarouselItem';
 import '../assets/styles/App.scss';
 
 const Home = ({ myList, trends, originals, filter }) => {
-  const myListFiltered = myList.filter((item) =>
-    item.title.toLowerCase().includes(filter.toLowerCase()),
+  const myListFiltered = myList.filter(
+    (item) => item.title.toLowerCase().includes(filter.toLowerCase()), // eslint-disable
   );
-  const trendsFiltered = trends.filter((item) =>
-    item.title.toLowerCase().includes(filter.toLowerCase()),
+  const trendsFiltered = trends.filter(
+    (item) => item.title.toLowerCase().includes(filter.toLowerCase()), // eslint-disable
   );
-  const originalsFiltered = originals.filter((item) =>
-    item.title.toLowerCase().includes(filter.toLowerCase()),
+  const originalsFiltered = originals.filter(
+    (item) => item.title.toLowerCase().includes(filter.toLowerCase()), // eslint-disable
   );
   return (
     <>
@@ -26,6 +26,7 @@ const Home = ({ myList, trends, originals, filter }) => {
         <Categories title='Mi Lista'>
           <Carousel>
             {myListFiltered.map((item) => (
+              // eslint-disable-next-line
               <CarouselItem key={item.id} {...item} isList />
             ))}
           </Carousel>
@@ -35,6 +36,7 @@ const Home = ({ myList, trends, originals, filter }) => {
         <Categories title='Tendencias'>
           <Carousel>
             {trendsFiltered.map((item) => (
+              // eslint-disable-next-line
               <CarouselItem key={item.id} {...item} />
             ))}
           </Carousel>
@@ -44,6 +46,7 @@ const Home = ({ myList, trends, originals, filter }) => {
         <Categories title='Originales de Platzi Videos'>
           <Carousel>
             {originalsFiltered.map((item) => (
+              // eslint-disable-next-line
               <CarouselItem key={item.id} {...item} />
             ))}
           </Carousel>
